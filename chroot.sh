@@ -15,7 +15,7 @@ locale-gen
 echo "Add LANG=${lang} to /etc/locale.conf"
 echo 'LANG=${lang}' >> /etc/locale.conf
 
-echo "Add KEYMAP=${key} to /etc/vconsole.conf"
+echo "Add KEYMAP=${keymap} to /etc/vconsole.conf"
 echo 'KEYMAP=${keymap}' >> /etc/vconsole.conf
 
 echo "Add ${hostname} to /etc/hostname"

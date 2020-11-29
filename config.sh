@@ -36,9 +36,12 @@ packages=(
     networkmanager
     util-linux
     xorg
-    plasma
-    kde-applications
-    plasma-wayland-session    
+    kde-applications  
+    plasma-desktop
+
 )
+
+# plasma
+# plasma-wayland-session  
 
 username=alessandro
