@@ -47,3 +47,21 @@ grub-install --target=${target} --efi-directory=${efi_directory} --bootloader-id
 echo "MKCONFIG : -o /boot/grub/grub.cfg"
 read
 grub-mkconfig -o /boot/grub/grub.cfg
+
+echo "Setup password for root user"
+read
+passwd
+
+echo "Create user ${username} group wheel"
+read
+useradd -m -G wheel "${username}"
+
+echo "setup password for ${username}"
+read
+passwd ${username}
+
+echo "Added wheel to sudo"
+read
+echo "%wheel ALL=(ALL) ALL" | EDITOR='tee -a' visudo
+
+

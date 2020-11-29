@@ -35,3 +35,5 @@ packages=(
     efibootmgr
     networkmanager
 )
+
+username=alessandro
