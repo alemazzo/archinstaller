@@ -65,3 +65,18 @@ read
 echo "%wheel ALL=(ALL) ALL" | EDITOR='tee -a' visudo
 
 
+echo "Enable sddm"
+read
+systemctl enable sddm.service
+
+echo "Enable NetworkManager"
+read
+systemctl enable NetworkManager.service
+
+echo "
+
+
+************
+* FINISHED *
+************
+"

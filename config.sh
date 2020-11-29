@@ -25,15 +25,18 @@ location=Rome
 hostname=Matebook
 
 packages=(
-    base 
-    base-devel 
-    linux-lts 
-    linux-firmware 
-    amd-ucode 
-    vim 
+    base
+    base-devel
+    linux-lts
+    linux-firmware
+    amd-ucode
+    vim
     grub
     efibootmgr
     networkmanager
+    xorg
+    plasma
+    breeze-grub
 )
 
 username=alessandro
