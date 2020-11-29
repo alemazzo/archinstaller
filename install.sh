@@ -59,8 +59,8 @@ echo "Mounting ${efi_partition} in /mnt${efi_directory}"
 read
 mount ${efi_partition} /mnt${efi_directory}
 
-echo "Install packages:"
-for pack in ${packages[@]};
+echo "Install packages: "
+for pack in ${packages[@]}; do
     echo "${pack}"
 done; 
 read
