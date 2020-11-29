@@ -34,9 +34,11 @@ packages=(
     grub
     efibootmgr
     networkmanager
+    util-linux
     xorg
     plasma
-    breeze-grub
+    kde-applications
+    plasma-wayland-session    
 )
 
 username=alessandro
