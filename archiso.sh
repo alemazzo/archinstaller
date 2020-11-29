@@ -6,6 +6,11 @@ loadkeys ${keymap}
 echo "Setting time"
 timedatectl set-ntp true
 
+echo "
+
+Partitioning : Press a key to proceed"
+read
+
 echo "g
 n
 1
@@ -20,6 +25,10 @@ n
 w
 " | fdisk /dev/sda
 
+echo "
+
+Formatting, press a key to proceed"
+read
 mkfs.fat -F32 ${efi_partition}
 mkfs.ext4 ${linux_partition}
 
