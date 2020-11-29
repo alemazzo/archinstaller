@@ -6,8 +6,22 @@ loadkeys ${keymap}
 echo "Setting time"
 timedatectl set-ntp true
 
-# Partition
-# Format
+echo "g
+n
+1
+
++${efi_partition_size}
+t
+1
+n
+2
+
+
+w
+" | fdisk /dev/sda
+
+mkfs.fat -F32 ${efi_partition}
+mkfs.ext4 ${linux_partition}
 
 echo "Mounting ${linux_partition} in /mnt"
 mount ${linux_partition} /mnt
@@ -38,3 +52,4 @@ chmod +x /mnt/chroot-install.sh
 
 echo "Chroot on /mnt and execute chroot-install.sh"
 arch-chroot /mnt /chroot-install.sh
+
