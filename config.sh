@@ -37,8 +37,8 @@ packages=(
     util-linux
     xorg
     kde-applications  
-    plasma-desktop
-
+    plasma
+    plasma-wayland-session
 )
 
 # plasma
