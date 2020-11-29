@@ -9,7 +9,7 @@ cat archiso.sh >> archiso-install.sh
 
 chmod +x archiso-install.sh
 
-
+./archiso-install.sh
 
 
 
