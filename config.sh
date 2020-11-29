@@ -17,13 +17,16 @@ efi_directory=/boot/efi
 bootloader_id=GRUB
 target=x86_64-efi
 
+# General config
 keymap=it
 locale='en_US.UTF-8 UTF-8'
 lang='en_US.UTF-8'
 region=Europe
 location=Rome
 hostname=Matebook
+username=alessandro
 
+# Packages
 packages=(
     base
     base-devel
@@ -41,7 +44,3 @@ packages=(
     plasma-wayland-session
 )
 
-# plasma
-# plasma-wayland-session  
-
-username=alessandro
