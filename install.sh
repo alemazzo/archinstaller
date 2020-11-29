@@ -27,7 +27,7 @@ timedatectl set-ntp true
 # Format
 # Mount
 
-pacstrap /mnt 
+pacstrap /mnt  packages[@]
 
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
