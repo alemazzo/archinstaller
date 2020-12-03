@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 # SUGGESTED PARTITION SCHEME
 # ==========================
@@ -43,4 +43,25 @@ packages=(
     plasma
     plasma-wayland-session
 )
+
+num_partition=2
+
+
+# Setup a single configuration
+# The first parameter should be the name of the variable
+# The second parameter should be the hint
+set_conf(){
+    echo -n "$2 [Default : ${!1}] : ";
+    read value;
+    if [[ ! -z ${value} ]]; then
+        eval "$1=$value";
+        # $1=$value;
+    fi;
+}
+
+
+set_conf "num_partition" "Number of partitions"
+
+echo "Num Partition : $num_partition";
+
 
