@@ -6,6 +6,13 @@
 # /dev/sda1    EFI System                      500MiB
 # /dev/sda2    Arch-Linux                      Remaining Space
 
+
+settings=(
+    keymap,"Keymap"
+    locale,"Locale"
+    num_partition,"Number_of_Partitions"
+
+)
 # Partitioning
 efi_partition=/dev/sda1
 efi_partition_size=512M
@@ -60,8 +67,9 @@ set_conf(){
 }
 
 
-set_conf "num_partition" "Number of partitions"
-
-echo "Num Partition : $num_partition";
-
-
+for i in ${settings[@]}; do IFS=","; set -- $i; 
+    echo "------------------------------------"
+    set_conf $1 $2;
+    eval 'echo \> $1 : ${!1}';
+done;
+echo "------------------------------------"
