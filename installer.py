@@ -89,7 +89,7 @@ if __name__ == "__main__":
     # Mounting partitions
     linux_partition = partitions['linux']
     efi_partition = partitions['efi']
-    efi_directory = boot['efi_directory']
+    efi_directory = boot['efi-directory']
     mountLinuxPartition(linux_partition)
     mountEfiPartition(efi_partition, efi_directory)
 
