@@ -68,6 +68,12 @@ def installPackage(package: str):
     execute(command, description)
 
 
+def generateFstab():
+    description = 'Generating fstab'
+    command = 'genfstab -U /mnt >> /mnt/etc/fstab'
+    execute(command, description)
+
+
 if __name__ == "__main__":
     args = parse_arguments()
     configurationFilePath = args.file
@@ -96,3 +102,6 @@ if __name__ == "__main__":
     # Installing packages
     for package in packages:
         installPackage(package)
+
+    # Generate fstab
+    generateFstab()
