@@ -29,7 +29,7 @@ def execute(command: str, description: str):
     message = f'{STATUS.PROGRESS} {description}'
     print(message, end='', flush=True)
     process = subprocess.Popen(
-        command, shell=True, stdout=subprocess.PIPE)
+        command, shell=True, stdout=subprocess.STDOUT)
     process.wait()
     if process.returncode == 0:
         message = f'{STATUS.OK} {description}'
