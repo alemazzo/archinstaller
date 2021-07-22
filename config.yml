@@ -1,9 +1,6 @@
 partitions:
-  efi:
-    device: /dev/sda1
-    size: 512
-  linux:
-    device: /dev/sda2
+  efi: /dev/sda1
+  linux: /dev/sda2
 
 boot:
   efi-directory: /boot/efi
