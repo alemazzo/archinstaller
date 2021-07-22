@@ -1,0 +1,36 @@
+partitions:
+  efi:
+    device: /dev/sda1
+    size: 512
+  linux:
+    device: /dev/sda2
+
+boot:
+  efi-directory: /boot/efi
+  bootloader-id: grub
+  target: x86_64-efi
+
+settings:
+  keymap: it
+  locale: en_US.UTF-8 UTF-8
+  lang: en_US.UTF-8
+  region: Europe
+  location: Rome
+  hostname: Matebook
+  username: alessandro
+
+packages:
+  - base
+  - base-devel
+  - linux-lts
+  - linux-firmware
+  - amd-ucode
+  - vim
+  - grub
+  - efibootmgr
+  - networkmanager
+  - util-linux
+  - xorg
+  - kde-applications
+  - plasma
+  - plasma-wayland-session
