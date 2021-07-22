@@ -11,7 +11,6 @@ settings=(
     keymap,"Keymap"
     locale,"Locale"
     num_partition,"Number_of_Partitions"
-
 )
 # Partitioning
 efi_partition=/dev/sda1
