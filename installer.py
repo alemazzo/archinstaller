@@ -38,14 +38,22 @@ class Executor:
             os.system(command)
             return 0
         elif Executor.LOGERROR:
+            """
             process = subprocess.Popen(
                 command, shell=True, stdout=subprocess.PIPE)
             process.wait()
+            """
+            process = subprocess.run(
+                command, shell=True, stdout=subprocess.PIPE)
             return process.returncode
         else:
+            """
             process = subprocess.Popen(
                 command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
             process.wait()
+            """
+            process = subprocess.run(
+                command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
             return process.returncode
 
 
