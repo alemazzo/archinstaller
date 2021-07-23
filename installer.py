@@ -266,6 +266,9 @@ def chroot(data):
     # Setup hosts
     setupHosts()
 
+    # mkinit
+    mkinit()
+
     # Grub install
     target = boot['target']
     efi_directory = boot['efi-directory']
