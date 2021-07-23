@@ -20,7 +20,6 @@ settings:
   region: Europe
   location: Rome
   hostname: Matebook
-  username: alessandro
 
 packages:
   - base
