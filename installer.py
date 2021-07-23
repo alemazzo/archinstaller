@@ -31,8 +31,12 @@ class Executor:
 
     @staticmethod
     def execute(command: str):
-        process = subprocess.Popen(
-            command, shell=True, stdout=subprocess.PIPE, stderr=(subprocess.DEVNULL if not Executor.LOGERROR else subprocess.STDOUT))
+        if Executor.LOGERROR:
+            process = subprocess.Popen(
+                command, shell=True, stdout=subprocess.PIPE)
+        else:
+            process = subprocess.Popen(
+                command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
         process.wait()
         return process.returncode
 
