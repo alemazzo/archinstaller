@@ -34,6 +34,6 @@ packages:
   - networkmanager
   - util-linux
   - xorg
-  - kde-applications --noconfirm
+  - kde-applications
   - plasma
   - plasma-wayland-session

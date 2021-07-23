@@ -78,7 +78,7 @@ def mountEfiPartition(efi_partition: str, path: str):
 
 def installPackage(package: str):
     description = f'Installing {package}'
-    command = f'pacstrap /mnt {package}'
+    command = f'pacstrap /mnt {package} --noconfirm'
     execute(command, description)
 
 
