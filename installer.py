@@ -208,7 +208,7 @@ def mkconfig():
 
 def setPasswForRoot(password: str):
     description = f'Setting root password to {password}'
-    command = f'echo "{password}" | passwd root'
+    command = f'echo -e "{password}\n{password}" | passwd root'
     execute(command, description)
 
 
