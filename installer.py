@@ -138,6 +138,9 @@ def archiso(data):
     # Copying installer to /mnt
     copyInstallerInMNT()
 
+    # Installing PyYaml
+    installPyaml()
+
     # Chroot and execute
     chrootAndExecute()
 
