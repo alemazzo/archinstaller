@@ -5,6 +5,7 @@
 # My imports
 from modules import parse_arguments, loadYamlFromFile
 import subprocess
+import os
 
 
 class colors:
@@ -104,7 +105,7 @@ def chrootAndExecute():
     description = 'Running chroot'
     command = 'arch-chroot /mnt /archinstaller/installer.py /archinstaller/config.yml --chroot' + \
         (' --logerror' if Executor.LOGERROR else '')
-    execute(command, description)
+    os.system(command)
 
 
 def archiso(data):
