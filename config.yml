@@ -7,6 +7,11 @@ boot:
   bootloader-id: grub
   target: x86_64-efi
 
+accounts:
+  root-password: root
+  username: alessandro
+  password: password
+
 settings:
   ntp: true
   keymap: it
