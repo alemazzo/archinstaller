@@ -4,7 +4,7 @@ A simple Arch Linux Installer
 ## Guide
 * Install git
 
-    `sudo pacman -Syy git`
+    `sudo pacman -Syu git`
 
 * Clone the repo
     
@@ -12,7 +12,11 @@ A simple Arch Linux Installer
 
 * Change directory
 
-    `cd ArchInstaller`
+    `cd archinstaller`
+
+* Setup your configuration
+  
+    `nano config.yml`
 
 * Make the script executable
 
