@@ -192,7 +192,7 @@ def mkinit():
 
 def grubInstall(target, efi_directory, bootloader_id):
     description = f'Installing GRUB to {target}'
-    command = f'grub-install --target={target} --efi-directory={efi_directory} --bootloader-id={bootloader_id}'
+    command = f'grub-install --target={target} --efi-directory={efi_directory} --bootloader-id={bootloader_id} --recheck'
     execute(command, description)
 
 
