@@ -236,6 +236,12 @@ def enableNetworkManager():
     execute(command, description)
 
 
+def reboot():
+    print("\n\nInstallation completed!!\n\n")
+    input("Press enter to reboot")
+    os.system('reboot')
+
+
 def chroot(data):
     partitions = data['partitions']
     boot = data['boot']
@@ -299,6 +305,8 @@ def chroot(data):
 
     # Enable NetworkManager
     enableNetworkManager()
+
+    reboot()
 
 
 if __name__ == "__main__":
