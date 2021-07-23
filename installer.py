@@ -94,9 +94,16 @@ def copyInstallerInMNT():
     execute(command, description)
 
 
+def installPyaml():
+    description = 'Installing PyYaml'
+    command = 'pacstrap /mnt python-yaml'
+    execute(command, description)
+
+
 def chrootAndExecute():
     description = 'Running chroot'
-    command = 'arch-chroot /mnt /archinstaller/installer.py --chroot'
+    command = 'arch-chroot /mnt /archinstaller/installer.py /archinstaller/config.yml --chroot' + \
+        (' --logerror' if Executor.LOGERROR else '')
     execute(command, description)
 
 
