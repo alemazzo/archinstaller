@@ -25,13 +25,23 @@ class STATUS:
     ERROR = f'[{colors.FAIL}\u2714{colors.ENDC}]'
 
 
+class Executor:
+
+    LOGERROR = False
+
+    @staticmethod
+    def execute(command: str):
+        process = subprocess.Popen(
+            command, shell=True, stdout=subprocess.PIPE, stderr=(subprocess.DEVNULL if not Executor.LOGERROR else subprocess.PIPE))
+        process.wait()
+        return process.returncode
+
+
 def execute(command: str, description: str):
     message = f'{STATUS.PROGRESS} {description}'
     print(message, end='', flush=True)
-    process = subprocess.Popen(
-        command, shell=True, stdout=subprocess.PIPE)
-    process.wait()
-    if process.returncode == 0:
+    returncode = Executor.execute(command)
+    if returncode == 0:
         message = f'{STATUS.OK} {description}'
     else:
         message = f'{STATUS.ERROR} {description}'
@@ -277,6 +287,9 @@ if __name__ == "__main__":
     args = parse_arguments()
     configurationFilePath = args.file
     data = loadYamlFromFile(configurationFilePath)
+
+    if args.logerror:
+        Executor.LOGERROR = True
 
     if args.chroot:
         chroot(data)
