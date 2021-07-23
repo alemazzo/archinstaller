@@ -12,5 +12,5 @@ n
 w
 " | fdisk /dev/sda
 
-mkfs.fat -F32 ${efi_partition}
-mkfs.ext4 ${linux_partition}
+mkfs.fat -F32 /dev/sda1
+mkfs.ext4 /dev/sda2
