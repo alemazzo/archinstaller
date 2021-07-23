@@ -214,7 +214,7 @@ def setPasswForRoot(password: str):
 
 def createUser(username: str, password: str):
     description = f'Creating user {username} with password {password}'
-    command = f'useradd -m -G wheel -s /bin/bash -p {password} {username}'
+    command = f'useradd -m -G wheel "{username}"; echo -e "{password}\n{password}" | passwd {username}'
     execute(command, description)
 
 
