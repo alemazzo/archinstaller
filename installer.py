@@ -96,7 +96,7 @@ def copyInstallerInMNT():
 
 def chrootAndExecute():
     description = 'Running chroot'
-    command = 'arch-chroot /mnt /archiso/installer.py --chroot'
+    command = 'arch-chroot /mnt /archinstaller/installer.py --chroot'
     execute(command, description)
 
 
