@@ -12,6 +12,9 @@ def get_argument_parser():
     parser.add_argument('--chroot',  action="store_true",
                         help='Execute the chroot install')
 
+    parser.add_argument('--ultralog',  action="store_true",
+                        help='Log everything and execute in the same process')
+
     parser.add_argument('--logerror',  action="store_true",
                         help='Log errors and warnings')
 

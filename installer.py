@@ -28,18 +28,25 @@ class STATUS:
 
 class Executor:
 
+    ULTRALOG = False
     LOGERROR = False
 
     @staticmethod
     def execute(command: str):
-        if Executor.LOGERROR:
+
+        if Executor.ULTRALOG:
+            os.system(command)
+            return 0
+        elif Executor.LOGERROR:
             process = subprocess.Popen(
                 command, shell=True, stdout=subprocess.PIPE)
+            process.wait()
+            return process.returncode
         else:
             process = subprocess.Popen(
                 command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
-        process.wait()
-        return process.returncode
+            process.wait()
+            return process.returncode
 
 
 def execute(command: str, description: str):
@@ -314,6 +321,8 @@ if __name__ == "__main__":
     configurationFilePath = args.file
     data = loadYamlFromFile(configurationFilePath)
 
+    if args.ultralog:
+        Executor.ULTRALOG = True
     if args.logerror:
         Executor.LOGERROR = True
 
