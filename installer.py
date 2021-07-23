@@ -90,7 +90,7 @@ def generateFstab():
 
 def copyInstallerInMNT():
     description = 'Copying installer to /mnt'
-    command = 'cp -r ./ /mnt'
+    command = 'cp -r ../archinstaller /mnt'
     execute(command, description)
 
 
