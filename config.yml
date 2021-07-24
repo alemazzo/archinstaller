@@ -1,12 +1,4 @@
-partitions:
-  efi: /dev/sda1
-  linux: /dev/sda2
-
-boot:
-  efi-directory: /boot/efi
-  bootloader-id: grub
-  target: x86_64-efi
-
+# Edit this settings before install
 accounts:
   root-password: root
   username: alessandro
@@ -29,8 +21,6 @@ packages:
   - grub
   - efibootmgr
   - networkmanager
-
-  # Optional packages
   - base-devel
   - amd-ucode
   - vim
@@ -41,3 +31,15 @@ packages:
   - kde-applications
   - plasma
   - plasma-wayland-session
+
+  # You can add other stuff here
+
+# Do not touch the following settings if you have used the `format.sh` script for partitioning.
+partitions:
+  efi: /dev/sda1
+  linux: /dev/sda2
+
+boot:
+  efi-directory: /boot/efi
+  bootloader-id: grub
+  target: x86_64-efi
