@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Arch-Installer][product-screenshot]](https://github.com/alemazzo/archinstaller/images/product.png)
+[![Arch-Installer][product-screenshot]](images/product.png)
 
 I often change operating system and I was tired of having to search every time one of the thousands of tutorials / guides on the internet on how to install arch-linux so I decided to create my own installer
 
