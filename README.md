@@ -51,9 +51,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<center>
-<img align=center src="images/product.png" alt="Product">
-</center>
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 I often change operating system and I was tired of having to search every time one of the thousands of tutorials / guides on the internet on how to install arch-linux so I decided to create my own installer
 
@@ -198,4 +197,4 @@ Project Link: [https://github.com/alemazzo/ArchInstaller](https://github.com/ale
 [issues-url]: https://github.com/alemazzo/ArchInstaller/issues
 [license-shield]: https://img.shields.io/github/license/alemazzo/ArchInstaller.svg?style=flat-square
 [license-url]: https://github.com/alemazzo/ArchInstaller/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/product.png
