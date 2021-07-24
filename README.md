@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Arch-Installer][product-screenshot]](https://github.com/alemazzo/archinstaller/images/product.png)
 
 I often change operating system and I was tired of having to search every time one of the thousands of tutorials / guides on the internet on how to install arch-linux so I decided to create my own installer
 
@@ -68,8 +68,7 @@ For now it offers a very limited range of installation customizations, which are
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The followings are the steps for install Arch with this tool.
 
 ### Prerequisites
 
@@ -80,7 +79,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Install git
 ```sh
-pacman -Sy git
+pacman -Syy git
 ```
 2. Clone the repo
 ```sh
