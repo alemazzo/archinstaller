@@ -148,10 +148,12 @@ packages:
 ## Usage
 
 
-
-4.  Execute the installer
+1. Make the script executable
 ```sh
 chmod +x installer.py
+```
+2.  Execute the installer
+```sh
 ./installer.py config.yml
 ```
 
