@@ -101,7 +101,11 @@ cd archinstaller
 1. If you want to make the partitions by yourself this is the moment. Otherwise use the `format.sh` script for erase all the disk and create a unique partition for the os.
 ```sh
 # This will delete all your data
-chmod +x format.sh
+
+# Make the script executable
+chmod +x format.sh 
+
+# Execute the script
 ./format.sh
 ```
 2. Start editing the configuration
